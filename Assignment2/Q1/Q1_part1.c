@@ -24,13 +24,13 @@ else if(pid==0){
 }
 else
 {
-   // waitpid(pid,NULL,0);
    while(global<100){
    global+=1;
    printf("parent process %d\n",global);
    }
 }
 
+// waitpid(pid,NULL,0);
 
 return(0);
 }

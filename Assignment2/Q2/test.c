@@ -11,10 +11,13 @@ int main()
 {
 pid_t pid;
 int inp;
-printf("Input pid ");
+char filepath[256];
+printf("Input pid :" );
 scanf("%d",&inp);
+printf("\nInput path : ");
+scanf("%s",&filepath);
 
-int long amma = syscall(sh_task_info,(pid_t)inp,"/home/yatharth/Desktop/output.txt");
+int long amma = syscall(sh_task_info,(pid_t)inp,filepath);
 if(amma==0){
 	printf("Syscall Returned 0\nSuccess!\n");
 }
